@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Spring boot WebSocket Chat Application</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,800;0,900;1,300;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/emojionearea/3.4.2/emojionearea.min.css" />
+
+</head>
+    <body>
+        <noscript>
+          <h2>Sorry! Your browser doesn't support Javascript</h2>
+        </noscript>
+        <div id="username-page">
+          <div class="username-page-container">
+            <h1 class="title">Type your username to enter the Chatroom</h1>
+            <form id="usernameForm" name="usernameForm">
+              <div class="form-group">
+                <input type="text" id="name" placeholder="Username" autocomplete="off" class="form-control" />
+              </div>
+              <div class="form-group">
+                <button type="submit" id="bouttonValider" class="accent username-submit">Start Chatting</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div id="chat-page" class="hidden">
+          <div class="chat-container">
+            <div class="chat-header disposition">
+                <div class="left">
+                    <h2 class="title"> ChatAPP- By MRCRG </h2>
+                </div>
+              <div class="right">
+                  <img src="images/maPhotoChatApp.jpeg" width="40px" style="border-radius: 60%"/>
+              </div>
+
+            </div>
+            <div class="connecting">
+              Connecting...
+            </div>
+            <ul id="messageArea">
+
+            </ul>
+            <form id="messageForm" name="messageForm">
+              <div class="form-group">
+                <div class="input-group clearfix">
+                  <input type="text" id="message" placeholder="Type a message..." autocomplete="off" class="form-control"/>
+                  <button type="submit" id="sendBottom" class="primary">Send</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.6.1/sockjs.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+        <script src="js/script.js"></script>
+
+    </body>
+</html>
